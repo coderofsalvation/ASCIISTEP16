@@ -3,3 +3,4 @@ set -e
 mmark RFC_ASCIISTEP16.md         > RFC_ASCIISTEP16.xml 
 mmark --html RFC_ASCIISTEP16.md  > README.md
 xml2rfc --v3 RFC_ASCIISTEP16.xml # RFC_ASCIISTEP16.txt
+sed 's/<title>.*//g' -i README.md 
