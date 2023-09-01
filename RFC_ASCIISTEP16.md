@@ -50,39 +50,39 @@ The table below focuses on QWERTY keyboards, but other keyboard layouts can foll
 
 > the uppercase character is preferred ('Q' instead of 'q' e.g.) to not interfere with normal keymappings of the software.
 
-| step | character | comment |
-|-|-|-|
-| 0 | Q | |
-| 1 | W | | 
-| 2 | E | |
-| 3 | R | |
-| 4 | T | |
-| 5 | Y | international equivalent 'Z' e.g.|
-| 6 | U | |
-| 7 | I | |
-| 8 | A | |
-| 9 | S | |
-| 10 | D | |
-| 11 | F | |
-| 12 | G | |
-| 13 | H | |
-| 14 | J | |
-| 15 | K | |
+| step | character | comment                           |
+|------|-----------|-----------------------------------|
+| 0    | Q         |                                   |
+| 1    | W         |                                   |
+| 2    | E         |                                   |
+| 3    | R         |                                   |
+| 4    | T         |                                   |
+| 5    | Y         | international equivalent 'Z' e.g. |
+| 6    | U         |                                   |
+| 7    | I         |                                   |
+| 8    | A         |                                   |
+| 9    | S         |                                   |
+| 10   | D         |                                   |
+| 11   | F         |                                   |
+| 12   | G         |                                   |
+| 13   | H         |                                   |
+| 14   | J         |                                   |
+| 15   | K         |                                   |
 
 | channel/track | ascii key for muting/selecting |
-|-|-|
-| 1 | '1' |
-| 2 | '2' |
-| 3 | '3' |
-| 4 | '4' |
-| 5 | '5' |
-| 6 | '6' |
-| 7 | '7' |
-| 8 | '8' |
-| 9 | '9' |
-| 10 | '0' |
-| 11 | '-' |
-| 12 | '=' |
+|---------------|--------------------------------|
+| 1             | '1'                            |
+| 2             | '2'                            |
+| 3             | '3'                            |
+| 4             | '4'                            |
+| 5             | '5'                            |
+| 6             | '6'                            |
+| 7             | '7'                            |
+| 8             | '8'                            |
+| 9             | '9'                            |
+| 10            | '0'                            |
+| 11            | '-'                            |
+| 12            | '='                            |
 
 ## Example implementation in C/C++
 

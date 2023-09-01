@@ -45,39 +45,184 @@ The goal of ASCIISTEP16 is to offer a pckeyboard mode (usually for tracker softw
 <p>the uppercase character is preferred (&lsquo;Q&rsquo; instead of &lsquo;q&rsquo; e.g.) to not interfere with normal keymappings of the software.</p>
 </blockquote>
 
-<p>| step | character | comment |
-|-|-|-|
-| 0 | Q | |
-| 1 | W | |
-| 2 | E | |
-| 3 | R | |
-| 4 | T | |
-| 5 | Y | international equivalent &lsquo;Z&rsquo; e.g.|
-| 6 | U | |
-| 7 | I | |
-| 8 | A | |
-| 9 | S | |
-| 10 | D | |
-| 11 | F | |
-| 12 | G | |
-| 13 | H | |
-| 14 | J | |
-| 15 | K | |</p>
+<table>
+<thead>
+<tr>
+<th>step</th>
+<th>character</th>
+<th>comment</th>
+</tr>
+</thead>
 
-<p>| channel/track | ascii key for muting/selecting |
-|-|-|
-| 1 | &lsquo;1&rsquo; |
-| 2 | &lsquo;2&rsquo; |
-| 3 | &lsquo;3&rsquo; |
-| 4 | &lsquo;4&rsquo; |
-| 5 | &lsquo;5&rsquo; |
-| 6 | &lsquo;6&rsquo; |
-| 7 | &lsquo;7&rsquo; |
-| 8 | &lsquo;8&rsquo; |
-| 9 | &lsquo;9&rsquo; |
-| 10 | &lsquo;0&rsquo; |
-| 11 | &lsquo;-&rsquo; |
-| 12 | &lsquo;=&rsquo; |</p>
+<tbody>
+<tr>
+<td>0</td>
+<td>Q</td>
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>W</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>E</td>
+<td></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>R</td>
+<td></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>T</td>
+<td></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Y</td>
+<td>international equivalent &lsquo;Z&rsquo; e.g.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>U</td>
+<td></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>I</td>
+<td></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>A</td>
+<td></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>S</td>
+<td></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>D</td>
+<td></td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>F</td>
+<td></td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>G</td>
+<td></td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>H</td>
+<td></td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>J</td>
+<td></td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>K</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>channel/track</th>
+<th>ascii key for muting/selecting</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>&lsquo;1&rsquo;</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>&lsquo;2&rsquo;</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>&lsquo;3&rsquo;</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>&lsquo;4&rsquo;</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>&lsquo;5&rsquo;</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>&lsquo;6&rsquo;</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>&lsquo;7&rsquo;</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>&lsquo;8&rsquo;</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>&lsquo;9&rsquo;</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>&lsquo;0&rsquo;</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>&rsquo;-&rsquo;</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>&rsquo;=&rsquo;</td>
+</tr>
+</tbody>
+</table>
 
 <h2 id="example-implementation-in-c-c">Example implementation in C/C++</h2>
 

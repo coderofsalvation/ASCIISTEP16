@@ -63,14 +63,14 @@ Table of Contents
    1.  What is ASCIISTEP16 . . . . . . . . . . . . . . . . . . . . .   2
    2.  Implementations . . . . . . . . . . . . . . . . . . . . . . .   2
    3.  Translation table . . . . . . . . . . . . . . . . . . . . . .   2
-     3.1.  Example implementation in C/C++ . . . . . . . . . . . . .   3
-   4.  Quick win: trackers & 'keyjazz'-enabled software  . . . . . .   4
-   5.  Bar pages . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-   6.  navigating bar pages  . . . . . . . . . . . . . . . . . . . .   5
-   7.  Scope (limits)  . . . . . . . . . . . . . . . . . . . . . . .   5
-   8.  Contact . . . . . . . . . . . . . . . . . . . . . . . . . . .   6
-   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
-   10. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   6
+     3.1.  Example implementation in C/C++ . . . . . . . . . . . . .   4
+   4.  Quick win: trackers & 'keyjazz'-enabled software  . . . . . .   6
+   5.  Bar pages . . . . . . . . . . . . . . . . . . . . . . . . . .   6
+   6.  navigating bar pages  . . . . . . . . . . . . . . . . . . . .   6
+   7.  Scope (limits)  . . . . . . . . . . . . . . . . . . . . . . .   7
+   8.  Contact . . . . . . . . . . . . . . . . . . . . . . . . . . .   7
+   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   7
+   10. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   7
 
 1.  What is ASCIISTEP16
 
@@ -114,15 +114,91 @@ van Kammen                Expires 4 March 2024                  [Page 2]
 Internet-Draft                 ASCIISTEP16                September 2023
 
 
-   | step | character | comment | |-|-|-| | 0 | Q | | | 1 | W | | | 2 |
-   E | | | 3 | R | | | 4 | T | | | 5 | Y | international equivalent 'Z'
-   e.g.| | 6 | U | | | 7 | I | | | 8 | A | | | 9 | S | | | 10 | D | | |
-   11 | F | | | 12 | G | | | 13 | H | | | 14 | J | | | 15 | K | |
+         +======+===========+===================================+
+         | step | character | comment                           |
+         +======+===========+===================================+
+         | 0    | Q         |                                   |
+         +------+-----------+-----------------------------------+
+         | 1    | W         |                                   |
+         +------+-----------+-----------------------------------+
+         | 2    | E         |                                   |
+         +------+-----------+-----------------------------------+
+         | 3    | R         |                                   |
+         +------+-----------+-----------------------------------+
+         | 4    | T         |                                   |
+         +------+-----------+-----------------------------------+
+         | 5    | Y         | international equivalent 'Z' e.g. |
+         +------+-----------+-----------------------------------+
+         | 6    | U         |                                   |
+         +------+-----------+-----------------------------------+
+         | 7    | I         |                                   |
+         +------+-----------+-----------------------------------+
+         | 8    | A         |                                   |
+         +------+-----------+-----------------------------------+
+         | 9    | S         |                                   |
+         +------+-----------+-----------------------------------+
+         | 10   | D         |                                   |
+         +------+-----------+-----------------------------------+
+         | 11   | F         |                                   |
+         +------+-----------+-----------------------------------+
+         | 12   | G         |                                   |
+         +------+-----------+-----------------------------------+
+         | 13   | H         |                                   |
+         +------+-----------+-----------------------------------+
+         | 14   | J         |                                   |
+         +------+-----------+-----------------------------------+
+         | 15   | K         |                                   |
+         +------+-----------+-----------------------------------+
 
-   | channel/track | ascii key for muting/selecting | |-|-| | 1 |
-   '1' | | 2 | '2' | | 3 | '3' | | 4 | '4' | | 5 | '5' | | 6 | '6' | |
-   7 | '7' | | 8 | '8' | | 9 | '9' | | 10 | '0' | | 11 | '-' | | 12 |
-   '=' |
+                                 Table 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+van Kammen                Expires 4 March 2024                  [Page 3]
+
+Internet-Draft                 ASCIISTEP16                September 2023
+
+
+            +===============+================================+
+            | channel/track | ascii key for muting/selecting |
+            +===============+================================+
+            | 1             | '1'                            |
+            +---------------+--------------------------------+
+            | 2             | '2'                            |
+            +---------------+--------------------------------+
+            | 3             | '3'                            |
+            +---------------+--------------------------------+
+            | 4             | '4'                            |
+            +---------------+--------------------------------+
+            | 5             | '5'                            |
+            +---------------+--------------------------------+
+            | 6             | '6'                            |
+            +---------------+--------------------------------+
+            | 7             | '7'                            |
+            +---------------+--------------------------------+
+            | 8             | '8'                            |
+            +---------------+--------------------------------+
+            | 9             | '9'                            |
+            +---------------+--------------------------------+
+            | 10            | '0'                            |
+            +---------------+--------------------------------+
+            | 11            | '-'                            |
+            +---------------+--------------------------------+
+            | 12            | '='                            |
+            +---------------+--------------------------------+
+
+                                 Table 2
 
 3.1.  Example implementation in C/C++
 
@@ -142,6 +218,14 @@ int ASCIISTEP16(char ascii, unsigned int bar)
         int number = -1;
         switch (ascii)
         {
+
+
+
+van Kammen                Expires 4 March 2024                  [Page 4]
+
+Internet-Draft                 ASCIISTEP16                September 2023
+
+
                 // ASCIISTEP16 standard (https://gist.github.com/coderofsalvation/8d760b191f4bb5465c8772d5618e5c4b)
                 case 'Q': number = 0; break;
                 case 'W': number = 1; break;
@@ -162,13 +246,6 @@ int ASCIISTEP16(char ascii, unsigned int bar)
         }
         return number == -1 ? -1 : number + (bar*16);
 }
-
-
-
-van Kammen                Expires 4 March 2024                  [Page 3]
-
-Internet-Draft                 ASCIISTEP16                September 2023
-
 
 int ASCIISTEP16_channel(char ascii)
 {
@@ -192,6 +269,19 @@ int ASCIISTEP16_channel(char ascii)
         return number;
 }
 
+
+
+
+
+
+
+
+
+van Kammen                Expires 4 March 2024                  [Page 5]
+
+Internet-Draft                 ASCIISTEP16                September 2023
+
+
 4.  Quick win: trackers & 'keyjazz'-enabled software
 
    Most trackers already support octave-switching, transposing-selected
@@ -212,20 +302,6 @@ int ASCIISTEP16_channel(char ascii)
    offer 4), which allow for editing longer patterns by repurposing the
    same 16 step-buttons.
 
-
-
-
-
-
-
-
-
-
-van Kammen                Expires 4 March 2024                  [Page 4]
-
-Internet-Draft                 ASCIISTEP16                September 2023
-
-
             +==========+======================================+
             | bar page | step value                           |
             +==========+======================================+
@@ -236,7 +312,7 @@ Internet-Draft                 ASCIISTEP16                September 2023
             | ..       | and so on                            |
             +----------+--------------------------------------+
 
-                                  Table 1
+                                  Table 3
 
    |  Basically, each stepvalue is relative based on the current bar-
    |  page, and evaluated as stepvalue * (page*16) (page starting at 0).
@@ -253,6 +329,14 @@ Internet-Draft                 ASCIISTEP16                September 2023
    |  This is easy to implement in 99% of trackers, which already
    |  support cursor-navigation.  So the implementation is deadsimple to
    |  determine & apply the current bar-page:
+
+
+
+
+van Kammen                Expires 4 March 2024                  [Page 6]
+
+Internet-Draft                 ASCIISTEP16                September 2023
+
 
  when entering a key ('E' which translates to asciistep16 value 2 e.g.):
    row = getCurrentRow()
@@ -274,13 +358,6 @@ Internet-Draft                 ASCIISTEP16                September 2023
    *  ASCIISTEP16 does not dictate how to change keyboard mappings
    *  ASCIISTEP16 does not dictate how to toggle/control userinterface
       elements
-
-
-
-van Kammen                Expires 4 March 2024                  [Page 5]
-
-Internet-Draft                 ASCIISTEP16                September 2023
-
 
    |  Most trackers/daws already have a default way of doing these
    |  things, therefore ASCIISTEP16 stay simple to implement.  Ideas for
@@ -312,25 +389,4 @@ Internet-Draft                 ASCIISTEP16                September 2023
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-van Kammen                Expires 4 March 2024                  [Page 6]
+van Kammen                Expires 4 March 2024                  [Page 7]

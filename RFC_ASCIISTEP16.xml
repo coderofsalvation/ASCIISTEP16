@@ -41,39 +41,182 @@ The goal of ASCIISTEP16 is to offer a pckeyboard mode (usually for tracker softw
 <section anchor="translation-table"><name>Translation table</name>
 <t>The table below focuses on QWERTY keyboards, but other keyboard layouts can follow the exact same logic of using the first 2x8 (rows-x-cols) alphabet keys (see image above).</t>
 <blockquote><t>the uppercase character is preferred ('Q' instead of 'q' e.g.) to not interfere with normal keymappings of the software.</t>
-</blockquote><t>| step | character | comment |
-|-|-|-|
-| 0 | Q | |
-| 1 | W | |
-| 2 | E | |
-| 3 | R | |
-| 4 | T | |
-| 5 | Y | international equivalent 'Z' e.g.|
-| 6 | U | |
-| 7 | I | |
-| 8 | A | |
-| 9 | S | |
-| 10 | D | |
-| 11 | F | |
-| 12 | G | |
-| 13 | H | |
-| 14 | J | |
-| 15 | K | |</t>
-<t>| channel/track | ascii key for muting/selecting |
-|-|-|
-| 1 | '1' |
-| 2 | '2' |
-| 3 | '3' |
-| 4 | '4' |
-| 5 | '5' |
-| 6 | '6' |
-| 7 | '7' |
-| 8 | '8' |
-| 9 | '9' |
-| 10 | '0' |
-| 11 | '-' |
-| 12 | '=' |</t>
+</blockquote><table>
+<thead>
+<tr>
+<th>step</th>
+<th>character</th>
+<th>comment</th>
+</tr>
+</thead>
 
+<tbody>
+<tr>
+<td>0</td>
+<td>Q</td>
+<td></td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>W</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>E</td>
+<td></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>R</td>
+<td></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>T</td>
+<td></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Y</td>
+<td>international equivalent 'Z' e.g.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>U</td>
+<td></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>I</td>
+<td></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>A</td>
+<td></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>S</td>
+<td></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>D</td>
+<td></td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>F</td>
+<td></td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>G</td>
+<td></td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>H</td>
+<td></td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>J</td>
+<td></td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>K</td>
+<td></td>
+</tr>
+</tbody>
+</table><table>
+<thead>
+<tr>
+<th>channel/track</th>
+<th>ascii key for muting/selecting</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>'1'</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>'2'</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>'3'</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>'4'</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>'5'</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>'6'</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>'7'</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>'8'</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>'9'</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>'0'</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>'-'</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>'='</td>
+</tr>
+</tbody>
+</table>
 <section anchor="example-implementation-in-c-c"><name>Example implementation in C/C++</name>
 
 <artwork>/* 
